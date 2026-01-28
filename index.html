@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>SS Shield Group — Segurança & Limpeza Corporativa</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SS Shield Group - Segurança patrimonial, limpeza corporativa e vigilância de obras. Padrão multinacional.">
+
+<style>
+:root{
+    --bg:#06080d;
+    --panel:#0e1320;
+    --primary:#1fa2ff;
+    --accent:#0fd850;
+    --text:#f5f7fb;
+    --muted:#9aa4b2;
+    --border:#1c2333;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+/* ===== BACKGROUND ANIMADO ===== */
+.bg-anim{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(31,162,255,0.12), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(15,216,80,0.08), transparent 45%),
+        linear-gradient(120deg,#05070c,#06080d,#05070c);
+    animation: moveBg 18s ease-in-out infinite;
+}
+
+@keyframes moveBg{
+    0%{background-position:0% 0%,100% 100%,0% 50%}
+    50%{background-position:100% 50%,0% 50%,100% 50%}
+    100%{background-position:0% 0%,100% 100%,0% 50%}
+}
+
+.container{
+    max-width:1250px;
+    margin:auto;
+    padding:0 20px;
+}
+
+/* ===== HEADER ===== */
+header{
+    padding:30px 0 120px;
+    border-bottom:1px solid var(--border);
+}
+
+.topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+/* ===== LOGO SEGURANÇA REAL ===== */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.logo svg{
+    width:56px;
+    height:56px;
+}
+
+.logo-text{
+    font-size:22px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.logo-text span{
+    display:block;
+    font-size:12px;
+    letter-spacing:1px;
+    color:var(--muted);
+    font-weight:500;
+}
+
+/* ===== HERO ===== */
+.hero{
+    margin-top:90px;
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:54px;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:var(--primary);
+}
+
+.hero p{
+    font-size:19px;
+    color:var(--muted);
+    max-width:720px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:40px;
+    padding:18px 38px;
+    background:linear-gradient(135deg,var(--primary),#0066ff);
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    border-radius:10px;
+    letter-spacing:1px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 40px rgba(31,162,255,0.35);
+}
+
+/* ===== SEÇÕES ===== */
+section{
+    padding:110px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:80px;
+}
+
+.section-title h2{
+    font-size:40px;
+}
+
+.section-title p{
+    margin-top:14px;
+    color:var(--muted);
+    font-size:18px;
+}
+
+/* ===== CARDS ===== */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:35px;
+}
+
+.card{
+    background:linear-gradient(180deg,#0e1320,#0a0f1a);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:45px 35px;
+    position:relative;
+    overflow:hidden;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(120deg,transparent,rgba(31,162,255,0.08),transparent);
+    opacity:0;
+    transition:0.4s;
+}
+
+.card:hover::before{
+    opacity:1;
+}
+
+.card h3{
+    color:var(--primary);
+    margin-bottom:18px;
+    font-size:22px;
+}
+
+.card p{
+    color:var(--muted);
+}
+
+/* ===== BLOCO AUTORIDADE ===== */
+.authority{
+    background:linear-gradient(135deg,#0b1020,#070b14);
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+}
+
+.authority-box{
+    max-width:950px;
+    margin:auto;
+    text-align:center;
+}
+
+.authority-box h3{
+    font-size:34px;
+    margin-bottom:25px;
+}
+
+.authority-box p{
+    font-size:18px;
+    color:var(--muted);
+    line-height:1.8;
+}
+
+/* ===== CTA ===== */
+.cta{
+    text-align:center;
+}
+
+.cta h2{
+    font-size:42px;
+}
+
+.cta p{
+    margin:25px 0;
+    font-size:19px;
+    color:var(--muted);
+}
+
+/* ===== FOOTER ===== */
+footer{
+    padding:40px 20px;
+    text-align:center;
+    color:#7b8595;
+    font-size:14px;
+    border-top:1px solid var(--border);
+}
+
+/* ===== RESPONSIVO ===== */
+@media(max-width:768px){
+    .hero h1{font-size:38px}
+    .section-title h2{font-size:32px}
+    .cta h2{font-size:34px}
+}
+</style>
+</head>
+
+<body>
+<div class="bg-anim"></div>
+
+<header>
+    <div class="container">
+        <div class="topbar">
+
+            <!-- LOGO ESCUDO SEGURANÇA -->
+            <div class="logo">
+                <svg viewBox="0 0 100 120" fill="none">
+                    <path d="M10 20 L50 5 L90 20 V60 C90 85 70 100 50 110 C30 100 10 85 10 60 Z"
+                          stroke="#1fa2ff" stroke-width="5" fill="rgba(31,162,255,0.05)"/>
+                    <path d="M30 55 L45 70 L70 40" stroke="#1fa2ff" stroke-width="6" fill="none"/>
+                </svg>
+                <div class="logo-text">
+                    SS SHIELD GROUP
+                    <span>SEGURANÇA & LIMPEZA</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="hero">
+            <h1>Protegendo <span>operações críticas</span><br></h1>
+            <p>
+                Segurança patrimonial, limpeza corporativa e vigilância de obras
+                para ambientes de alto fluxo, grandes lojas e empreendimentos estratégicos.
+            </p>
+            <a href="#contato" class="btn">Solicitar Proposta</a>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <div class="section-title">
+            <h2>Soluções de Alto Nível</h2>
+            <p>Projetadas para empresas que exigem controle, disciplina e confiança</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Segurança Patrimonial</h3>
+                <p>Atuação em lojas, centros comerciais, vias de grande circulação e operações sensíveis.</p>
+            </div>
+            <div class="card">
+                <h3>Limpeza Corporativa</h3>
+                <p>Padrões elevados de higiene, organização e apresentação institucional.</p>
+            </div>
+            <div class="card">
+                <h3>Vigilância de Obras</h3>
+                <p>Proteção do patrimônio, controle de acesso e prevenção de perdas.</p>
+            </div>
+            <div class="card">
+                <h3>Controle Operacional</h3>
+                <p>Disciplina, fluxo organizado e apoio à gestão do ambiente.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="authority">
+    <div class="authority-box">
+        <h3>Uma empresa preparada para grandes contratos</h3>
+        <p>
+            ✔ Profissionais treinados e supervisionados<br>
+            ✔ Procedimentos claros e padronizados<br>
+            ✔ Atuação em regiões estratégicas e alto risco<br>
+            ✔ Confiança, sigilo e responsabilidade absoluta
+        </p>
+    </div>
+</section>
+
+<section class="cta" id="contato">
+    <div class="container">
+        <h2>Eleve o padrão da sua operação</h2>
+        <p>Solicite uma proposta corporativa com a SS Shield Group</p>
+        <a href="mailto:contato@ssshield.com" class="btn">Entrar em Contato</a>
+    </div>
+</section>
+
+<footer>
+    © 2026 SS Shield Group — Segurança & Limpeza Corporativa
+</footer>
+
+</body>
+</html>
