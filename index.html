@@ -1,337 +1,1327 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>SS Shield Group — Segurança & Limpeza Corporativa</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SS Shield Group - Segurança patrimonial, limpeza corporativa e vigilância de obras. Padrão multinacional.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SS Shield Group | Segurança Premium</title>
+  <meta name="description" content="Segurança premium com padrão Dubai para operações críticas, ambientes de luxo e ativos estratégicos.">
+  <meta property="og:title" content="SS Shield Group | Segurança Premium">
+  <meta property="og:description" content="Segurança premium com padrão Dubai para operações críticas, ambientes de luxo e ativos estratégicos.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="logo%20ssl.jpg">
+  <meta name="theme-color" content="#07080c">
+  <link rel="icon" href="logo%20ssl.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#07080c;
+      --panel:#0f131d;
+      --panel-2:#121724;
+      --primary:#d6b46c;
+      --primary-strong:#c29a4a;
+      --accent:#2dd4d7;
+      --text:#f5f3ef;
+      --muted:#a4afc2;
+      --border:rgba(255,255,255,0.08);
+      --shadow:0 30px 60px rgba(0,0,0,0.45);
+    }
 
-<style>
-:root{
-    --bg:#06080d;
-    --panel:#0e1320;
-    --primary:#1fa2ff;
-    --accent:#0fd850;
-    --text:#f5f7fb;
-    --muted:#9aa4b2;
-    --border:#1c2333;
-}
+    * {
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: "Inter", "Segoe UI", Arial, sans-serif;
-}
+    html {
+      scroll-behavior:smooth;
+    }
 
-body{
-    background:var(--bg);
-    color:var(--text);
-    overflow-x:hidden;
-}
+    body {
+      font-family:"Manrope","Segoe UI",Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+      min-height:100vh;
+    }
 
-/* ===== BACKGROUND ANIMADO ===== */
-.bg-anim{
-    position:fixed;
-    inset:0;
-    z-index:-1;
-    background:
-        radial-gradient(circle at 20% 30%, rgba(31,162,255,0.12), transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(15,216,80,0.08), transparent 45%),
-        linear-gradient(120deg,#05070c,#06080d,#05070c);
-    animation: moveBg 18s ease-in-out infinite;
-}
+    img {
+      max-width:100%;
+      display:block;
+    }
 
-@keyframes moveBg{
-    0%{background-position:0% 0%,100% 100%,0% 50%}
-    50%{background-position:100% 50%,0% 50%,100% 50%}
-    100%{background-position:0% 0%,100% 100%,0% 50%}
-}
+    a {
+      color:inherit;
+      text-decoration:none;
+    }
 
-.container{
-    max-width:1250px;
-    margin:auto;
-    padding:0 20px;
-}
+    .bg-glow {
+      position:fixed;
+      inset:-25%;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(214,180,108,0.18), transparent 45%),
+        radial-gradient(circle at 80% 10%, rgba(45,212,215,0.12), transparent 40%),
+        radial-gradient(circle at 50% 80%, rgba(214,180,108,0.08), transparent 50%),
+        linear-gradient(130deg,#05060a 0%, #07080c 45%, #0a0b11 100%);
+      z-index:-1;
+      animation:floatGlow 18s ease-in-out infinite;
+    }
 
-/* ===== HEADER ===== */
-header{
-    padding:30px 0 120px;
-    border-bottom:1px solid var(--border);
-}
+    @keyframes floatGlow {
+      0% { transform:translate3d(0,0,0) scale(1); }
+      50% { transform:translate3d(0,-20px,0) scale(1.02); }
+      100% { transform:translate3d(0,0,0) scale(1); }
+    }
 
-.topbar{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
+    .container {
+      max-width:1200px;
+      margin:0 auto;
+      padding:0 24px;
+    }
 
-/* ===== LOGO SEGURANÇA REAL ===== */
-.logo{
-    display:flex;
-    align-items:center;
-    gap:16px;
-}
+    .site-header {
+      padding:32px 0 110px;
+      border-bottom:1px solid var(--border);
+    }
 
-.logo svg{
-    width:56px;
-    height:56px;
-}
+    .topbar {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      flex-wrap:wrap;
+    }
 
-.logo-text{
-    font-size:22px;
-    font-weight:800;
-    letter-spacing:2px;
-}
+    .logo {
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
 
-.logo-text span{
-    display:block;
-    font-size:12px;
-    letter-spacing:1px;
-    color:var(--muted);
-    font-weight:500;
-}
+    .logo-img {
+      width:64px;
+      height:64px;
+      border-radius:16px;
+      object-fit:cover;
+      background:#0b0e16;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow:0 12px 24px rgba(0,0,0,0.4);
+    }
 
-/* ===== HERO ===== */
-.hero{
-    margin-top:90px;
-    max-width:900px;
-}
+    .logo-text {
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+    }
 
-.hero h1{
-    font-size:54px;
-    line-height:1.1;
-    margin-bottom:25px;
-}
+    .logo-title {
+      font-family:"Cinzel",serif;
+      letter-spacing:2px;
+      font-size:20px;
+      font-weight:700;
+    }
 
-.hero h1 span{
-    color:var(--primary);
-}
+    .logo-sub {
+      font-size:12px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
 
-.hero p{
-    font-size:19px;
-    color:var(--muted);
-    max-width:720px;
-}
+    .nav {
+      display:flex;
+      gap:22px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
 
-.btn{
-    display:inline-block;
-    margin-top:40px;
-    padding:18px 38px;
-    background:linear-gradient(135deg,var(--primary),#0066ff);
-    color:#fff;
-    text-decoration:none;
-    font-weight:700;
-    border-radius:10px;
-    letter-spacing:1px;
-    transition:0.3s;
-}
+    .nav a {
+      font-size:14px;
+      text-transform:uppercase;
+      letter-spacing:1.2px;
+      color:var(--muted);
+      padding:8px 0;
+      position:relative;
+    }
 
-.btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 15px 40px rgba(31,162,255,0.35);
-}
+    .nav a::after {
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      height:2px;
+      width:0;
+      background:var(--primary);
+      transition:width 0.3s ease;
+    }
 
-/* ===== SEÇÕES ===== */
-section{
-    padding:110px 0;
-}
+    .nav a:hover,
+    .nav a:focus {
+      color:var(--text);
+    }
 
-.section-title{
-    text-align:center;
-    margin-bottom:80px;
-}
+    .nav a:hover::after,
+    .nav a:focus::after {
+      width:100%;
+    }
 
-.section-title h2{
-    font-size:40px;
-}
+    .lang-switch {
+      display:flex;
+      border:1px solid var(--border);
+      border-radius:999px;
+      padding:4px;
+      background:rgba(255,255,255,0.03);
+    }
 
-.section-title p{
-    margin-top:14px;
-    color:var(--muted);
-    font-size:18px;
-}
+    .lang-btn {
+      background:transparent;
+      border:none;
+      color:var(--muted);
+      padding:6px 12px;
+      border-radius:999px;
+      font-size:12px;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      cursor:pointer;
+      transition:0.3s;
+    }
 
-/* ===== CARDS ===== */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:35px;
-}
+    .lang-btn.is-active {
+      background:var(--primary);
+      color:#0b0c10;
+      font-weight:700;
+    }
 
-.card{
-    background:linear-gradient(180deg,#0e1320,#0a0f1a);
-    border:1px solid var(--border);
-    border-radius:18px;
-    padding:45px 35px;
-    position:relative;
-    overflow:hidden;
-}
+    .lang-btn:focus {
+      outline:2px solid var(--accent);
+      outline-offset:2px;
+    }
 
-.card::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(120deg,transparent,rgba(31,162,255,0.08),transparent);
-    opacity:0;
-    transition:0.4s;
-}
+    .hero {
+      margin-top:60px;
+      display:grid;
+      grid-template-columns:1.05fr 0.95fr;
+      gap:48px;
+      align-items:center;
+    }
 
-.card:hover::before{
-    opacity:1;
-}
+    .eyebrow {
+      font-size:13px;
+      letter-spacing:2.4px;
+      text-transform:uppercase;
+      color:var(--primary);
+      display:inline-block;
+      margin-bottom:18px;
+    }
 
-.card h3{
-    color:var(--primary);
-    margin-bottom:18px;
-    font-size:22px;
-}
+    .hero h1 {
+      font-family:"Cinzel",serif;
+      font-size:48px;
+      line-height:1.1;
+      margin-bottom:20px;
+    }
 
-.card p{
-    color:var(--muted);
-}
+    .hero h1 span {
+      color:var(--primary);
+    }
 
-/* ===== BLOCO AUTORIDADE ===== */
-.authority{
-    background:linear-gradient(135deg,#0b1020,#070b14);
-    border-top:1px solid var(--border);
-    border-bottom:1px solid var(--border);
-}
+    .hero p {
+      color:var(--muted);
+      font-size:18px;
+    }
 
-.authority-box{
-    max-width:950px;
-    margin:auto;
-    text-align:center;
-}
+    .hero-actions {
+      display:flex;
+      flex-wrap:wrap;
+      gap:18px;
+      margin-top:32px;
+    }
 
-.authority-box h3{
-    font-size:34px;
-    margin-bottom:25px;
-}
+    .btn {
+      padding:16px 30px;
+      border-radius:12px;
+      font-weight:600;
+      letter-spacing:0.5px;
+      transition:0.3s;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      border:1px solid transparent;
+    }
 
-.authority-box p{
-    font-size:18px;
-    color:var(--muted);
-    line-height:1.8;
-}
+    .btn.primary {
+      background:linear-gradient(135deg,var(--primary),var(--primary-strong));
+      color:#0b0c10;
+      box-shadow:0 15px 35px rgba(214,180,108,0.25);
+    }
 
-/* ===== CTA ===== */
-.cta{
-    text-align:center;
-}
+    .btn.primary:hover {
+      transform:translateY(-2px);
+      box-shadow:0 20px 45px rgba(214,180,108,0.35);
+    }
 
-.cta h2{
-    font-size:42px;
-}
+    .btn.ghost {
+      border-color:var(--border);
+      color:var(--text);
+      background:rgba(255,255,255,0.03);
+    }
 
-.cta p{
-    margin:25px 0;
-    font-size:19px;
-    color:var(--muted);
-}
+    .btn.ghost:hover {
+      border-color:var(--primary);
+      color:var(--primary);
+    }
 
-/* ===== FOOTER ===== */
-footer{
-    padding:40px 20px;
-    text-align:center;
-    color:#7b8595;
-    font-size:14px;
-    border-top:1px solid var(--border);
-}
+    .hero-badges {
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:26px;
+    }
 
-/* ===== RESPONSIVO ===== */
-@media(max-width:768px){
-    .hero h1{font-size:38px}
-    .section-title h2{font-size:32px}
-    .cta h2{font-size:34px}
-}
-</style>
+    .hero-badges span {
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.06);
+      border:1px solid var(--border);
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    .hero-panel {
+      display:grid;
+      gap:22px;
+    }
+
+    .panel-card {
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .panel-card h3 {
+      color:var(--primary);
+      margin-bottom:16px;
+      font-size:20px;
+    }
+
+    .panel-card ul {
+      list-style:none;
+      display:grid;
+      gap:12px;
+      color:var(--muted);
+    }
+
+    .panel-card li {
+      position:relative;
+      padding-left:22px;
+    }
+
+    .panel-card li::before {
+      content:"•";
+      position:absolute;
+      left:0;
+      color:var(--accent);
+    }
+
+    .panel-metrics {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+
+    .metric {
+      background:var(--panel-2);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px;
+      text-align:center;
+    }
+
+    .metric-value {
+      display:block;
+      font-size:22px;
+      font-weight:700;
+      color:var(--primary);
+    }
+
+    .metric-label {
+      font-size:12px;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:1px;
+      margin-top:6px;
+      display:block;
+    }
+
+    .section {
+      padding:100px 0;
+    }
+
+    .section-title {
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2 {
+      font-family:"Cinzel",serif;
+      font-size:36px;
+      margin-top:10px;
+    }
+
+    .section-title p {
+      color:var(--muted);
+      margin-top:14px;
+      font-size:17px;
+      max-width:720px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    .grid {
+      display:grid;
+      gap:24px;
+      grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+    }
+
+    .card {
+      background:linear-gradient(180deg, rgba(16,19,30,0.95), rgba(10,12,18,0.95));
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:28px;
+      transition:0.3s;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .card::after {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:radial-gradient(circle at top, rgba(214,180,108,0.1), transparent 60%);
+      opacity:0;
+      transition:0.3s;
+    }
+
+    .card:hover {
+      transform:translateY(-4px);
+      border-color:rgba(214,180,108,0.35);
+    }
+
+    .card:hover::after {
+      opacity:1;
+    }
+
+    .card h3 {
+      color:var(--primary);
+      margin-bottom:14px;
+      font-size:20px;
+      position:relative;
+      z-index:1;
+    }
+
+    .card p {
+      color:var(--muted);
+      position:relative;
+      z-index:1;
+    }
+
+    .steps {
+      display:grid;
+      gap:24px;
+      grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+    }
+
+    .step {
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:26px;
+    }
+
+    .step-index {
+      font-size:13px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      color:var(--accent);
+      margin-bottom:12px;
+      display:block;
+    }
+
+    .step h3 {
+      font-size:20px;
+      margin-bottom:10px;
+    }
+
+    .step p {
+      color:var(--muted);
+    }
+
+    .sector-list {
+      display:grid;
+      gap:14px;
+      grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    }
+
+    .sector {
+      background:rgba(255,255,255,0.03);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:16px;
+      color:var(--muted);
+    }
+
+    .cta {
+      padding:90px 0;
+    }
+
+    .cta-box {
+      background:linear-gradient(140deg, rgba(214,180,108,0.15), rgba(16,19,30,0.95));
+      border:1px solid rgba(214,180,108,0.35);
+      border-radius:24px;
+      padding:38px;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .cta-box h2 {
+      font-family:"Cinzel",serif;
+      font-size:32px;
+      margin-bottom:12px;
+    }
+
+    .cta-box p {
+      color:var(--muted);
+      max-width:520px;
+    }
+
+    .contact {
+      padding-top:60px;
+    }
+
+    .contact-grid {
+      display:grid;
+      gap:32px;
+      grid-template-columns:1.1fr 0.9fr;
+      align-items:start;
+    }
+
+    .contact-form {
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:30px;
+    }
+
+    .form-row {
+      display:grid;
+      gap:18px;
+      grid-template-columns:repeat(auto-fit, minmax(210px,1fr));
+    }
+
+    .form-field {
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      margin-bottom:18px;
+    }
+
+    .form-field label {
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      background:#0b0f19;
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:12px 14px;
+      color:var(--text);
+      font-size:14px;
+    }
+
+    .form-field textarea {
+      min-height:120px;
+      resize:vertical;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      outline:2px solid rgba(214,180,108,0.35);
+      border-color:rgba(214,180,108,0.55);
+    }
+
+    .form-actions {
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      align-items:center;
+    }
+
+    .form-note {
+      font-size:12px;
+      color:var(--muted);
+      max-width:360px;
+    }
+
+    .contact-panel {
+      background:var(--panel-2);
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:28px;
+    }
+
+    .contact-panel h3 {
+      font-size:22px;
+      margin-bottom:12px;
+    }
+
+    .contact-panel p {
+      color:var(--muted);
+      margin-bottom:22px;
+    }
+
+    .contact-list {
+      list-style:none;
+      display:grid;
+      gap:14px;
+    }
+
+    .contact-list span {
+      display:block;
+      font-size:12px;
+      letter-spacing:1.2px;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin-bottom:6px;
+    }
+
+    .contact-list li {
+      padding:14px;
+      border-radius:14px;
+      background:rgba(255,255,255,0.04);
+      border:1px solid var(--border);
+    }
+
+    .contact-list a,
+    .contact-list strong {
+      color:var(--text);
+      font-weight:600;
+    }
+
+    .contact-availability {
+      margin-top:18px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    footer {
+      padding:32px 24px;
+      border-top:1px solid var(--border);
+      text-align:center;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    .whatsapp-float {
+      position:fixed;
+      right:24px;
+      bottom:24px;
+      background:#1f2f2a;
+      border:1px solid rgba(37,211,102,0.6);
+      color:#e7fff1;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:14px 18px;
+      border-radius:999px;
+      box-shadow:0 18px 40px rgba(0,0,0,0.45);
+      z-index:10;
+    }
+
+    .whatsapp-float svg {
+      width:20px;
+      height:20px;
+    }
+
+    .whatsapp-float:hover {
+      background:#25d366;
+      color:#0b0c10;
+    }
+
+    @media (max-width:1024px) {
+      .hero {
+        grid-template-columns:1fr;
+      }
+
+      .panel-metrics {
+        grid-template-columns:repeat(auto-fit, minmax(140px,1fr));
+      }
+
+      .contact-grid {
+        grid-template-columns:1fr;
+      }
+
+      .cta-box {
+        flex-direction:column;
+        align-items:flex-start;
+      }
+    }
+
+    @media (max-width:720px) {
+      .site-header {
+        padding-bottom:90px;
+      }
+
+      .hero h1 {
+        font-size:36px;
+      }
+
+      .section-title h2 {
+        font-size:30px;
+      }
+
+      .nav {
+        justify-content:flex-start;
+      }
+
+      .btn {
+        width:100%;
+        justify-content:center;
+      }
+
+      .hero-actions {
+        flex-direction:column;
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      * {
+        animation-duration:0.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:0.01ms !important;
+      }
+
+      html {
+        scroll-behavior:auto;
+      }
+    }
+  </style>
 </head>
+<body id="top">
+  <div class="bg-glow"></div>
 
-<body>
-<div class="bg-anim"></div>
-
-<header>
+  <header class="site-header">
     <div class="container">
-        <div class="topbar">
+      <div class="topbar">
+        <a class="logo" href="#top">
+          <img src="logo%20ssl.jpg" alt="SS Shield Group" class="logo-img" width="64" height="64" decoding="async">
+          <div class="logo-text">
+            <span class="logo-title">SS SHIELD GROUP</span>
+            <span class="logo-sub" data-i18n="logoTagline">Segurança Premium</span>
+          </div>
+        </a>
 
-            <!-- LOGO ESCUDO SEGURANÇA -->
-            <div class="logo">
-                <svg viewBox="0 0 100 120" fill="none">
-                    <path d="M10 20 L50 5 L90 20 V60 C90 85 70 100 50 110 C30 100 10 85 10 60 Z"
-                          stroke="#1fa2ff" stroke-width="5" fill="rgba(31,162,255,0.05)"/>
-                    <path d="M30 55 L45 70 L70 40" stroke="#1fa2ff" stroke-width="6" fill="none"/>
-                </svg>
-                <div class="logo-text">
-                    SS SHIELD GROUP
-                    <span>SEGURANÇA & LIMPEZA</span>
-                </div>
+        <nav class="nav" aria-label="Navegação principal" data-i18n-aria="navAria">
+          <a href="#services" data-i18n="navServices">Serviços</a>
+          <a href="#protocols" data-i18n="navProtocols">Protocolos</a>
+          <a href="#sectors" data-i18n="navSectors">Setores</a>
+          <a href="#contact" data-i18n="navContact">Contato</a>
+        </nav>
+
+        <div class="lang-switch" role="group" aria-label="Selecionar idioma" data-i18n-aria="langSwitchLabel">
+          <button class="lang-btn is-active" type="button" data-lang="pt">PT</button>
+          <button class="lang-btn" type="button" data-lang="en">EN</button>
+        </div>
+      </div>
+
+      <div class="hero">
+        <div class="hero-content">
+          <span class="eyebrow" data-i18n="heroEyebrow">Padrão Dubai • Segurança de Elite</span>
+          <h1 data-i18n-html="heroTitle">Segurança <span>premium</span> para operações críticas e ambientes de luxo</h1>
+          <p data-i18n="heroSubtitle">
+            Protegemos ativos, pessoas e reputações com equipes altamente treinadas, tecnologia integrada e discrição absoluta.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact" data-i18n="heroCta">Solicitar proposta</a>
+            <a class="btn ghost" href="https://wa.me/971500000000?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20proposta%20premium%20de%20seguran%C3%A7a." target="_blank" rel="noopener" data-i18n="heroWhatsApp" data-i18n-href="whatsappLink">Mensagem direta no WhatsApp</a>
+          </div>
+          <div class="hero-badges">
+            <span data-i18n="badge1">Centro de comando 24/7</span>
+            <span data-i18n="badge2">Protocolos confidenciais</span>
+            <span data-i18n="badge3">Equipes multilíngues</span>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="panel-card">
+            <h3 data-i18n="panelTitle">Soluções premium integradas</h3>
+            <ul>
+              <li data-i18n="panelItem1">Proteção executiva e VIP</li>
+              <li data-i18n="panelItem2">Segurança corporativa e patrimonial</li>
+              <li data-i18n="panelItem3">Vigilância inteligente de obras</li>
+              <li data-i18n="panelItem4">Concierge de segurança e recepção</li>
+            </ul>
+          </div>
+          <div class="panel-metrics">
+            <div class="metric">
+              <span class="metric-value">24/7</span>
+              <span class="metric-label" data-i18n="metric1">Monitoramento dedicado</span>
             </div>
-
+            <div class="metric">
+              <span class="metric-value">SLA</span>
+              <span class="metric-label" data-i18n="metric2">Resposta imediata</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">360º</span>
+              <span class="metric-label" data-i18n="metric3">Cobertura estratégica</span>
+            </div>
+          </div>
         </div>
-
-        <div class="hero">
-            <h1>Protegendo <span>operações críticas</span><br></h1>
-            <p>
-                Segurança patrimonial, limpeza corporativa e vigilância de obras
-                para ambientes de alto fluxo, grandes lojas e empreendimentos estratégicos.
-            </p>
-            <a href="#contato" class="btn">Solicitar Proposta</a>
-        </div>
+      </div>
     </div>
-</header>
+  </header>
 
-<section>
-    <div class="container">
+  <main>
+    <section id="services" class="section">
+      <div class="container">
         <div class="section-title">
-            <h2>Soluções de Alto Nível</h2>
-            <p>Projetadas para empresas que exigem controle, disciplina e confiança</p>
+          <span class="eyebrow" data-i18n="servicesEyebrow">Portfólio premium</span>
+          <h2 data-i18n="servicesTitle">Soluções completas para operações estratégicas</h2>
+          <p data-i18n="servicesSubtitle">
+            Desenhadas para empresas que exigem excelência, controle e presença de alto padrão.
+          </p>
         </div>
-
         <div class="grid">
-            <div class="card">
-                <h3>Segurança Patrimonial</h3>
-                <p>Atuação em lojas, centros comerciais, vias de grande circulação e operações sensíveis.</p>
-            </div>
-            <div class="card">
-                <h3>Limpeza Corporativa</h3>
-                <p>Padrões elevados de higiene, organização e apresentação institucional.</p>
-            </div>
-            <div class="card">
-                <h3>Vigilância de Obras</h3>
-                <p>Proteção do patrimônio, controle de acesso e prevenção de perdas.</p>
-            </div>
-            <div class="card">
-                <h3>Controle Operacional</h3>
-                <p>Disciplina, fluxo organizado e apoio à gestão do ambiente.</p>
-            </div>
+          <article class="card">
+            <h3 data-i18n="service1Title">Segurança Corporativa</h3>
+            <p data-i18n="service1Desc">Controle de acesso, rondas inteligentes e gestão de risco para escritórios, sedes e data centers.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="service2Title">Proteção Executiva & VIP</h3>
+            <p data-i18n="service2Desc">Equipe treinada para deslocamentos, eventos e viagens com discrição e postura internacional.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="service3Title">Vigilância de Obras</h3>
+            <p data-i18n="service3Desc">Prevenção de perdas, controle de fornecedores e proteção de equipamentos críticos.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="service4Title">Segurança Residencial Premium</h3>
+            <p data-i18n="service4Desc">Protocolos personalizados para condomínios e residências de alto padrão.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="service5Title">Comando & Inteligência</h3>
+            <p data-i18n="service5Desc">Central de monitoramento 24/7, análise de ocorrências e relatórios executivos.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="service6Title">Hospitalidade Segura</h3>
+            <p data-i18n="service6Desc">Concierge de segurança para hotéis, resorts e marcas de luxo.</p>
+          </article>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section class="authority">
-    <div class="authority-box">
-        <h3>Uma empresa preparada para grandes contratos</h3>
-        <p>
-            ✔ Profissionais treinados e supervisionados<br>
-            ✔ Procedimentos claros e padronizados<br>
-            ✔ Atuação em regiões estratégicas e alto risco<br>
-            ✔ Confiança, sigilo e responsabilidade absoluta
-        </p>
-    </div>
-</section>
+    <section id="protocols" class="section">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow" data-i18n="protocolsEyebrow">Metodologia</span>
+          <h2 data-i18n="protocolsTitle">Protocolos claros, execução impecável</h2>
+          <p data-i18n="protocolsSubtitle">
+            Processo estruturado para garantir excelência operacional do briefing ao acompanhamento contínuo.
+          </p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <span class="step-index" data-i18n="step1Index">Etapa 01</span>
+            <h3 data-i18n="step1Title">Diagnóstico 360º</h3>
+            <p data-i18n="step1Desc">Levantamento de riscos, fluxos, vulnerabilidades e exigências regulatórias.</p>
+          </div>
+          <div class="step">
+            <span class="step-index" data-i18n="step2Index">Etapa 02</span>
+            <h3 data-i18n="step2Title">Plano estratégico</h3>
+            <p data-i18n="step2Desc">Desenho de protocolos, dimensionamento de equipe e tecnologia integrada.</p>
+          </div>
+          <div class="step">
+            <span class="step-index" data-i18n="step3Index">Etapa 03</span>
+            <h3 data-i18n="step3Title">Implementação premium</h3>
+            <p data-i18n="step3Desc">Treinamento, posicionamento e padrões de atendimento alinhados à marca.</p>
+          </div>
+          <div class="step">
+            <span class="step-index" data-i18n="step4Index">Etapa 04</span>
+            <h3 data-i18n="step4Title">Gestão contínua</h3>
+            <p data-i18n="step4Desc">Indicadores, auditorias e melhoria contínua com reportes executivos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="cta" id="contato">
-    <div class="container">
-        <h2>Eleve o padrão da sua operação</h2>
-        <p>Solicite uma proposta corporativa com a SS Shield Group</p>
-        <a href="mailto:contato@ssshield.com" class="btn">Entrar em Contato</a>
-    </div>
-</section>
+    <section id="sectors" class="section">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow" data-i18n="sectorsEyebrow">Setores atendidos</span>
+          <h2 data-i18n="sectorsTitle">Experiência em ambientes de alto valor</h2>
+          <p data-i18n="sectorsSubtitle">
+            Atuamos em operações que exigem discrição, controle e reputação impecável.
+          </p>
+        </div>
+        <div class="sector-list">
+          <div class="sector" data-i18n="sector1">Luxo & varejo de alto padrão</div>
+          <div class="sector" data-i18n="sector2">Empreendimentos imobiliários e condomínios</div>
+          <div class="sector" data-i18n="sector3">Infraestrutura crítica e data centers</div>
+          <div class="sector" data-i18n="sector4">Construção civil e megaobras</div>
+          <div class="sector" data-i18n="sector5">Hotéis, resorts e hospitalidade</div>
+          <div class="sector" data-i18n="sector6">Eventos corporativos e diplomáticos</div>
+        </div>
+      </div>
+    </section>
 
-<footer>
-    © 2026 SS Shield Group — Segurança & Limpeza Corporativa
-</footer>
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow" data-i18n="trustEyebrow">Diferenciais</span>
+          <h2 data-i18n="trustTitle">Padrão internacional, cultura de confidencialidade</h2>
+          <p data-i18n="trustSubtitle">
+            Protocolos alinhados às melhores práticas globais, com foco em compliance e experiência premium.
+          </p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3 data-i18n="trust1Title">Compliance e governança</h3>
+            <p data-i18n="trust1Desc">Práticas alinhadas à ISO 18788, ISO 31000 e padrões de proteção corporativa.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="trust2Title">Seleção e treinamento</h3>
+            <p data-i18n="trust2Desc">Recrutamento rigoroso, formação contínua e conduta alinhada à marca.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="trust3Title">Tecnologia integrada</h3>
+            <p data-i18n="trust3Desc">Monitoramento inteligente, comunicação criptografada e relatórios executivos.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="trust4Title">Experiência do cliente</h3>
+            <p data-i18n="trust4Desc">Presença elegante, postura diplomática e atendimento discreto.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section class="cta">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <span class="eyebrow" data-i18n="ctaEyebrow">Briefing executivo confidencial</span>
+            <h2 data-i18n="ctaTitle">Eleve o padrão da sua segurança</h2>
+            <p data-i18n="ctaSubtitle">
+              Receba uma proposta alinhada ao nível de exigência do seu negócio.
+            </p>
+          </div>
+          <a class="btn primary" href="#contact" data-i18n="ctaButton">Agendar reunião confidencial</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow" data-i18n="contactEyebrow">Contato</span>
+          <h2 data-i18n="contactTitle">Vamos desenhar a sua operação de segurança</h2>
+          <p data-i18n="contactSubtitle">
+            Atendimento consultivo, respostas rápidas e absoluto sigilo.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <form class="contact-form" action="https://formsubmit.co/contato@ssshield.com" method="POST">
+            <input type="hidden" name="_subject" value="Novo contato - SS Shield Group">
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name" data-i18n="formName">Nome completo</label>
+                <input id="name" name="name" type="text" required autocomplete="name" placeholder="Seu nome" data-i18n-placeholder="placeholderName">
+              </div>
+              <div class="form-field">
+                <label for="company" data-i18n="formCompany">Empresa</label>
+                <input id="company" name="company" type="text" autocomplete="organization" placeholder="Nome da empresa" data-i18n-placeholder="placeholderCompany">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="email" data-i18n="formEmail">E-mail corporativo</label>
+                <input id="email" name="email" type="email" required autocomplete="email" placeholder="voce@empresa.com" data-i18n-placeholder="placeholderEmail">
+              </div>
+              <div class="form-field">
+                <label for="phone" data-i18n="formPhone">Telefone / WhatsApp</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+971 50 000 0000" data-i18n-placeholder="placeholderPhone">
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="service" data-i18n="formService">Serviço de interesse</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected data-i18n="serviceOptionPlaceholder">Selecione um serviço</option>
+                <option value="corporate" data-i18n="serviceOption1">Segurança corporativa</option>
+                <option value="vip" data-i18n="serviceOption2">Proteção executiva & VIP</option>
+                <option value="construction" data-i18n="serviceOption3">Vigilância de obras</option>
+                <option value="residential" data-i18n="serviceOption4">Segurança residencial premium</option>
+                <option value="command" data-i18n="serviceOption5">Comando & inteligência</option>
+                <option value="hospitality" data-i18n="serviceOption6">Hospitalidade segura</option>
+                <option value="other" data-i18n="serviceOption7">Outro</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="message" data-i18n="formMessage">Mensagem</label>
+              <textarea id="message" name="message" placeholder="Conte-nos sobre a operação, local, desafios e prazos." data-i18n-placeholder="placeholderMessage"></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn primary" type="submit" data-i18n="formSubmit">Enviar solicitação</button>
+              <span class="form-note" data-i18n="formNote">Ao enviar, você concorda com um atendimento consultivo e confidencial.</span>
+            </div>
+          </form>
+
+          <div class="contact-panel">
+            <h3 data-i18n="contactDetailsTitle">Atendimento premium 24/7</h3>
+            <p data-i18n="contactDetailsSubtitle">Equipe bilíngue com protocolos internacionais.</p>
+            <ul class="contact-list">
+              <li>
+                <span data-i18n="contactEmailLabel">E-mail</span>
+                <a href="mailto:contato@ssshield.com">contato@ssshield.com</a>
+              </li>
+              <li>
+                <span data-i18n="contactPhoneLabel">Linha direta</span>
+                <a href="tel:+971500000000" data-i18n="contactPhoneValue">+971 50 000 0000</a>
+              </li>
+              <li>
+                <span data-i18n="contactAddressLabel">Base de operações</span>
+                <strong data-i18n="contactCityValue">Operação global</strong>
+              </li>
+            </ul>
+            <p class="contact-availability" data-i18n="contactAvailability">Disponibilidade 24/7 • Resposta imediata</p>
+            <a class="btn ghost" href="https://wa.me/971500000000?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20proposta%20premium%20de%20seguran%C3%A7a." target="_blank" rel="noopener" data-i18n="contactWhatsappButton" data-i18n-href="whatsappLink">Falar no WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span data-i18n="footerText">© 2026 SS Shield Group — Segurança Premium</span>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/971500000000?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20proposta%20premium%20de%20seguran%C3%A7a." target="_blank" rel="noopener" data-i18n-href="whatsappLink" data-i18n-aria="whatsappAria">
+    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M19.11 17.33c-.26-.13-1.55-.77-1.79-.86-.24-.09-.41-.13-.58.13-.17.26-.67.86-.82 1.04-.15.17-.3.19-.56.06-.26-.13-1.1-.4-2.1-1.27-.78-.69-1.31-1.54-1.46-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.58-1.4-.8-1.91-.21-.51-.43-.44-.58-.45l-.5-.01c-.17 0-.45.06-.69.32-.24.26-.9.88-.9 2.14 0 1.26.92 2.48 1.05 2.65.13.17 1.81 2.76 4.39 3.87.61.26 1.09.42 1.46.54.61.19 1.16.16 1.6.1.49-.07 1.55-.63 1.77-1.24.22-.61.22-1.13.15-1.24-.06-.11-.24-.17-.5-.3zM16.02 27.3c-1.78 0-3.52-.48-5.05-1.39l-3.53.93.94-3.43A10.99 10.99 0 0 1 5.73 16c0-6.07 4.94-11 11.01-11 2.94 0 5.7 1.14 7.78 3.22A10.9 10.9 0 0 1 27.03 16c0 6.07-4.94 11.01-11.01 11.01zm0-20.03c-4.98 0-9.03 4.05-9.03 9.03 0 1.78.52 3.51 1.5 4.99l.24.36-.56 2.06 2.11-.55.35.22a9 9 0 0 0 4.39 1.13c4.98 0 9.03-4.05 9.03-9.03 0-2.41-.94-4.68-2.64-6.38a8.97 8.97 0 0 0-6.39-2.63z"/>
+    </svg>
+    <span data-i18n="whatsappFloating">WhatsApp direto 24/7</span>
+  </a>
+
+  <script>
+    const translations = {
+      pt: {
+        metaTitle: "SS Shield Group | Segurança Premium",
+        metaDescription: "Segurança premium com padrão Dubai para operações críticas, ambientes de luxo e ativos estratégicos.",
+        logoTagline: "Segurança Premium",
+        navServices: "Serviços",
+        navProtocols: "Protocolos",
+        navSectors: "Setores",
+        navContact: "Contato",
+        navAria: "Navegação principal",
+        langSwitchLabel: "Selecionar idioma",
+        heroEyebrow: "Padrão Dubai • Segurança de Elite",
+        heroTitle: "Segurança <span>premium</span> para operações críticas e ambientes de luxo",
+        heroSubtitle: "Protegemos ativos, pessoas e reputações com equipes altamente treinadas, tecnologia integrada e discrição absoluta.",
+        heroCta: "Solicitar proposta",
+        heroWhatsApp: "Mensagem direta no WhatsApp",
+        badge1: "Centro de comando 24/7",
+        badge2: "Protocolos confidenciais",
+        badge3: "Equipes multilíngues",
+        panelTitle: "Soluções premium integradas",
+        panelItem1: "Proteção executiva e VIP",
+        panelItem2: "Segurança corporativa e patrimonial",
+        panelItem3: "Vigilância inteligente de obras",
+        panelItem4: "Concierge de segurança e recepção",
+        metric1: "Monitoramento dedicado",
+        metric2: "Resposta imediata",
+        metric3: "Cobertura estratégica",
+        servicesEyebrow: "Portfólio premium",
+        servicesTitle: "Soluções completas para operações estratégicas",
+        servicesSubtitle: "Desenhadas para empresas que exigem excelência, controle e presença de alto padrão.",
+        service1Title: "Segurança Corporativa",
+        service1Desc: "Controle de acesso, rondas inteligentes e gestão de risco para escritórios, sedes e data centers.",
+        service2Title: "Proteção Executiva & VIP",
+        service2Desc: "Equipe treinada para deslocamentos, eventos e viagens com discrição e postura internacional.",
+        service3Title: "Vigilância de Obras",
+        service3Desc: "Prevenção de perdas, controle de fornecedores e proteção de equipamentos críticos.",
+        service4Title: "Segurança Residencial Premium",
+        service4Desc: "Protocolos personalizados para condomínios e residências de alto padrão.",
+        service5Title: "Comando & Inteligência",
+        service5Desc: "Central de monitoramento 24/7, análise de ocorrências e relatórios executivos.",
+        service6Title: "Hospitalidade Segura",
+        service6Desc: "Concierge de segurança para hotéis, resorts e marcas de luxo.",
+        protocolsEyebrow: "Metodologia",
+        protocolsTitle: "Protocolos claros, execução impecável",
+        protocolsSubtitle: "Processo estruturado para garantir excelência operacional do briefing ao acompanhamento contínuo.",
+        step1Index: "Etapa 01",
+        step1Title: "Diagnóstico 360º",
+        step1Desc: "Levantamento de riscos, fluxos, vulnerabilidades e exigências regulatórias.",
+        step2Index: "Etapa 02",
+        step2Title: "Plano estratégico",
+        step2Desc: "Desenho de protocolos, dimensionamento de equipe e tecnologia integrada.",
+        step3Index: "Etapa 03",
+        step3Title: "Implementação premium",
+        step3Desc: "Treinamento, posicionamento e padrões de atendimento alinhados à marca.",
+        step4Index: "Etapa 04",
+        step4Title: "Gestão contínua",
+        step4Desc: "Indicadores, auditorias e melhoria contínua com reportes executivos.",
+        sectorsEyebrow: "Setores atendidos",
+        sectorsTitle: "Experiência em ambientes de alto valor",
+        sectorsSubtitle: "Atuamos em operações que exigem discrição, controle e reputação impecável.",
+        sector1: "Luxo & varejo de alto padrão",
+        sector2: "Empreendimentos imobiliários e condomínios",
+        sector3: "Infraestrutura crítica e data centers",
+        sector4: "Construção civil e megaobras",
+        sector5: "Hotéis, resorts e hospitalidade",
+        sector6: "Eventos corporativos e diplomáticos",
+        trustEyebrow: "Diferenciais",
+        trustTitle: "Padrão internacional, cultura de confidencialidade",
+        trustSubtitle: "Protocolos alinhados às melhores práticas globais, com foco em compliance e experiência premium.",
+        trust1Title: "Compliance e governança",
+        trust1Desc: "Práticas alinhadas à ISO 18788, ISO 31000 e padrões de proteção corporativa.",
+        trust2Title: "Seleção e treinamento",
+        trust2Desc: "Recrutamento rigoroso, formação contínua e conduta alinhada à marca.",
+        trust3Title: "Tecnologia integrada",
+        trust3Desc: "Monitoramento inteligente, comunicação criptografada e relatórios executivos.",
+        trust4Title: "Experiência do cliente",
+        trust4Desc: "Presença elegante, postura diplomática e atendimento discreto.",
+        ctaEyebrow: "Briefing executivo confidencial",
+        ctaTitle: "Eleve o padrão da sua segurança",
+        ctaSubtitle: "Receba uma proposta alinhada ao nível de exigência do seu negócio.",
+        ctaButton: "Agendar reunião confidencial",
+        contactEyebrow: "Contato",
+        contactTitle: "Vamos desenhar a sua operação de segurança",
+        contactSubtitle: "Atendimento consultivo, respostas rápidas e absoluto sigilo.",
+        formName: "Nome completo",
+        formCompany: "Empresa",
+        formEmail: "E-mail corporativo",
+        formPhone: "Telefone / WhatsApp",
+        formService: "Serviço de interesse",
+        formMessage: "Mensagem",
+        formSubmit: "Enviar solicitação",
+        formNote: "Ao enviar, você concorda com um atendimento consultivo e confidencial.",
+        placeholderName: "Seu nome",
+        placeholderCompany: "Nome da empresa",
+        placeholderEmail: "voce@empresa.com",
+        placeholderPhone: "+971 50 000 0000",
+        placeholderService: "Selecione um serviço",
+        placeholderMessage: "Conte-nos sobre a operação, local, desafios e prazos.",
+        serviceOptionPlaceholder: "Selecione um serviço",
+        serviceOption1: "Segurança corporativa",
+        serviceOption2: "Proteção executiva & VIP",
+        serviceOption3: "Vigilância de obras",
+        serviceOption4: "Segurança residencial premium",
+        serviceOption5: "Comando & inteligência",
+        serviceOption6: "Hospitalidade segura",
+        serviceOption7: "Outro",
+        contactDetailsTitle: "Atendimento premium 24/7",
+        contactDetailsSubtitle: "Equipe bilíngue com protocolos internacionais.",
+        contactEmailLabel: "E-mail",
+        contactPhoneLabel: "Linha direta",
+        contactAddressLabel: "Base de operações",
+        contactAvailability: "Disponibilidade 24/7 • Resposta imediata",
+        contactPhoneValue: "+971 50 000 0000",
+        contactCityValue: "Operação global",
+        contactWhatsappButton: "Falar no WhatsApp",
+        whatsappFloating: "WhatsApp direto 24/7",
+        whatsappAria: "Abrir conversa no WhatsApp",
+        whatsappLink: "https://wa.me/971500000000?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20proposta%20premium%20de%20seguran%C3%A7a.",
+        footerText: "© 2026 SS Shield Group — Segurança Premium"
+      },
+      en: {
+        metaTitle: "SS Shield Group | Premium Security",
+        metaDescription: "Dubai-grade premium security for critical operations, luxury environments, and strategic assets.",
+        logoTagline: "Premium Security",
+        navServices: "Services",
+        navProtocols: "Protocols",
+        navSectors: "Sectors",
+        navContact: "Contact",
+        navAria: "Primary navigation",
+        langSwitchLabel: "Select language",
+        heroEyebrow: "Dubai Standard • Elite Security",
+        heroTitle: "Premium <span>security</span> for critical operations and luxury environments",
+        heroSubtitle: "We protect assets, people, and reputations with highly trained teams, integrated technology, and absolute discretion.",
+        heroCta: "Request a proposal",
+        heroWhatsApp: "Direct message on WhatsApp",
+        badge1: "24/7 command center",
+        badge2: "Confidential protocols",
+        badge3: "Multilingual teams",
+        panelTitle: "Integrated premium solutions",
+        panelItem1: "Executive and VIP protection",
+        panelItem2: "Corporate and asset security",
+        panelItem3: "Intelligent construction surveillance",
+        panelItem4: "Security concierge and reception",
+        metric1: "Dedicated monitoring",
+        metric2: "Immediate response",
+        metric3: "Strategic coverage",
+        servicesEyebrow: "Premium portfolio",
+        servicesTitle: "Complete solutions for strategic operations",
+        servicesSubtitle: "Designed for organizations that demand excellence, control, and high-standard presence.",
+        service1Title: "Corporate Security",
+        service1Desc: "Access control, smart patrols, and risk management for HQs and data centers.",
+        service2Title: "Executive & VIP Protection",
+        service2Desc: "Teams trained for travel, events, and movements with discretion and international posture.",
+        service3Title: "Construction Surveillance",
+        service3Desc: "Loss prevention, supplier control, and protection of critical equipment.",
+        service4Title: "Premium Residential Security",
+        service4Desc: "Tailored protocols for gated communities and high-end residences.",
+        service5Title: "Command & Intelligence",
+        service5Desc: "24/7 monitoring, incident analysis, and executive reporting.",
+        service6Title: "Secure Hospitality",
+        service6Desc: "Security concierge for hotels, resorts, and luxury brands.",
+        protocolsEyebrow: "Methodology",
+        protocolsTitle: "Clear protocols, flawless execution",
+        protocolsSubtitle: "Structured process to ensure operational excellence from briefing to ongoing oversight.",
+        step1Index: "Step 01",
+        step1Title: "360° assessment",
+        step1Desc: "Risk mapping, flow analysis, vulnerabilities, and regulatory requirements.",
+        step2Index: "Step 02",
+        step2Title: "Strategic plan",
+        step2Desc: "Protocol design, staffing, and integrated technology stack.",
+        step3Index: "Step 03",
+        step3Title: "Premium deployment",
+        step3Desc: "Training, positioning, and service standards aligned with your brand.",
+        step4Index: "Step 04",
+        step4Title: "Continuous management",
+        step4Desc: "KPIs, audits, and executive reporting with continuous improvement.",
+        sectorsEyebrow: "Sectors served",
+        sectorsTitle: "Experience in high-value environments",
+        sectorsSubtitle: "We operate where discretion, control, and flawless reputation are mandatory.",
+        sector1: "Luxury retail and flagship stores",
+        sector2: "Real estate and gated communities",
+        sector3: "Critical infrastructure and data centers",
+        sector4: "Construction and mega projects",
+        sector5: "Hotels, resorts, and hospitality",
+        sector6: "Corporate and diplomatic events",
+        trustEyebrow: "Differentials",
+        trustTitle: "International standard, confidentiality culture",
+        trustSubtitle: "Protocols aligned with global best practices, focused on compliance and premium experience.",
+        trust1Title: "Compliance & governance",
+        trust1Desc: "Practices aligned with ISO 18788, ISO 31000, and corporate protection standards.",
+        trust2Title: "Selection & training",
+        trust2Desc: "Rigorous recruitment, continuous training, and brand-aligned conduct.",
+        trust3Title: "Integrated technology",
+        trust3Desc: "Smart monitoring, encrypted communications, and executive reporting.",
+        trust4Title: "Client experience",
+        trust4Desc: "Elegant presence, diplomatic posture, and discreet service.",
+        ctaEyebrow: "Confidential executive briefing",
+        ctaTitle: "Raise your security standards",
+        ctaSubtitle: "Receive a proposal aligned to the level of rigor your business requires.",
+        ctaButton: "Schedule a confidential meeting",
+        contactEyebrow: "Contact",
+        contactTitle: "Let's design your security operation",
+        contactSubtitle: "Consultative service, fast response, and absolute confidentiality.",
+        formName: "Full name",
+        formCompany: "Company",
+        formEmail: "Business email",
+        formPhone: "Phone / WhatsApp",
+        formService: "Service of interest",
+        formMessage: "Message",
+        formSubmit: "Send request",
+        formNote: "By sending, you agree to a consultative and confidential approach.",
+        placeholderName: "Your name",
+        placeholderCompany: "Company name",
+        placeholderEmail: "you@company.com",
+        placeholderPhone: "+971 50 000 0000",
+        placeholderService: "Select a service",
+        placeholderMessage: "Tell us about location, challenges, and timelines.",
+        serviceOptionPlaceholder: "Select a service",
+        serviceOption1: "Corporate security",
+        serviceOption2: "Executive & VIP protection",
+        serviceOption3: "Construction surveillance",
+        serviceOption4: "Premium residential security",
+        serviceOption5: "Command & intelligence",
+        serviceOption6: "Secure hospitality",
+        serviceOption7: "Other",
+        contactDetailsTitle: "Premium service 24/7",
+        contactDetailsSubtitle: "Bilingual team with international protocols.",
+        contactEmailLabel: "Email",
+        contactPhoneLabel: "Direct line",
+        contactAddressLabel: "Operations base",
+        contactAvailability: "24/7 availability • Immediate response",
+        contactPhoneValue: "+971 50 000 0000",
+        contactCityValue: "Global operations",
+        contactWhatsappButton: "Talk on WhatsApp",
+        whatsappFloating: "WhatsApp direct 24/7",
+        whatsappAria: "Open WhatsApp chat",
+        whatsappLink: "https://wa.me/971500000000?text=Hello%2C%20I%27d%20like%20a%20premium%20security%20proposal.",
+        footerText: "© 2026 SS Shield Group — Premium Security"
+      }
+    };
+
+    const translatable = document.querySelectorAll(
+      "[data-i18n], [data-i18n-html], [data-i18n-placeholder], [data-i18n-aria], [data-i18n-href]"
+    );
+
+    const langButtons = document.querySelectorAll(".lang-btn");
+
+    const applyTranslations = (lang) => {
+      const selected = translations[lang] || translations.pt;
+      document.documentElement.lang = lang === "en" ? "en" : "pt-BR";
+      document.title = selected.metaTitle;
+      const description = document.querySelector('meta[name="description"]');
+      if (description) {
+        description.setAttribute("content", selected.metaDescription);
+      }
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) {
+        ogTitle.setAttribute("content", selected.metaTitle);
+      }
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+      if (ogDescription) {
+        ogDescription.setAttribute("content", selected.metaDescription);
+      }
+
+      translatable.forEach((element) => {
+        if (element.dataset.i18n) {
+          element.textContent = selected[element.dataset.i18n] || element.textContent;
+        }
+        if (element.dataset.i18nHtml) {
+          element.innerHTML = selected[element.dataset.i18nHtml] || element.innerHTML;
+        }
+        if (element.dataset.i18nPlaceholder) {
+          element.setAttribute("placeholder", selected[element.dataset.i18nPlaceholder] || element.getAttribute("placeholder"));
+        }
+        if (element.dataset.i18nAria) {
+          element.setAttribute("aria-label", selected[element.dataset.i18nAria] || element.getAttribute("aria-label"));
+        }
+        if (element.dataset.i18nHref) {
+          element.setAttribute("href", selected[element.dataset.i18nHref] || element.getAttribute("href"));
+        }
+      });
+
+      langButtons.forEach((button) => {
+        button.classList.toggle("is-active", button.dataset.lang === lang);
+      });
+    };
+
+    langButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        applyTranslations(button.dataset.lang);
+      });
+    });
+
+    applyTranslations("pt");
+  </script>
 </body>
 </html>
